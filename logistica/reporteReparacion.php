@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
-
+    
 <head>
-    <title>Index</title>
+    <title>Reportes</title>
     <?php
         require_once($_SERVER['DOCUMENT_ROOT'].'/resources/config.php');
         $miSession = new Sesion();
         $miSession -> iniciarSesion();
     ?>
 </head>
-
+    
 <body>
     <!-- HEADER -->
     <?php
@@ -25,8 +25,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <!-- El contenido -->
-                        <h3 class="">Bienvenido a la zona de administración</h3>
+                        <!-- CONTENIDO -->
                     </div>
                 </div>
             </div>

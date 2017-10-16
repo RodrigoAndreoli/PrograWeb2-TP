@@ -17,6 +17,11 @@
     position: relative;
 }
 
+.no-padding .row{
+    margin-left: 0;
+    margin-right: 0;
+}
+
 .message {
   box-sizing: border-box;
   width: 100%; 

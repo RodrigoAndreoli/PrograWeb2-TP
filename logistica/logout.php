@@ -1,10 +1,8 @@
 <?php
 
-	session_start();
-	unset($_SESSION[error]);
-	unset($_SESSION['usuario']);
-	session_destroy();
-	header("Location: login.php");
-    exit();
+	require_once($_SERVER['DOCUMENT_ROOT'].'/resources/config.php');
+    $miSession = new Sesion();
+    $miSession -> iniciarSesion();
+    $miSession -> destruirSesion();
 
 ?>

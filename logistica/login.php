@@ -54,7 +54,7 @@
             <div class="container-fluid bg-1">
                 <div class="row">
                     <div class="col text-center">
-                        <img src="/resources/images/login.jpg" class="img-responsive" style="display:inline" alt="Loguistica">
+                        <img src="/resources/images/login.jpg" style="display:inline" alt="Loguistica">
                         <h3 class="margin">LOGISTICA</h3>
                     </div>
                 </div>
