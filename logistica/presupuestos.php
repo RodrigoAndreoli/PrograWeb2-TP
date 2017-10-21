@@ -2,15 +2,12 @@
 <html lang="es">
 
 <head>
-    <title>Usuarios</title>
+    <title>Presupuestos</title>
     <?php 
         require_once($_SERVER['DOCUMENT_ROOT'].'/resources/config.php');
         $miSession = new Sesion();
         $miSession -> iniciarSesion();
         $miSession -> permisos();
-    
-        $obj = new controlDB();
-        include $LIBRARY_PATH.'/usuarios_pag.php';
     ?>
 </head>
 
@@ -32,7 +29,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col">
-                                    <h1>Zona de Usuarios</h1>
+                                    <h1>Zona de Presupuestos</h1>
                                     <hr/>
                                 </div>
                             </div>
@@ -43,30 +40,28 @@
                                     <div class="table-responsive">
                                         <table class="table table-striped table-bordered table-condensed table-hover">
                                             <thead>
-                                                <th  class="text-center">Nombre</th>
-                                                <th  class="text-center">Documento</th>
-                                                <th  class="text-center">Nro documento</th>
-                                                <th  class="text-center">Nacimiento</th>
-                                                <th  class="text-center">Rol</th>
-                                                <th  class="text-center">Operacion</th>
+                                                <th  class="text-center">XX</th>
+                                                <th  class="text-center">XX</th>
+                                                <th  class="text-center">XX</th>
+                                                <th  class="text-center">XX</th>
+                                                <th  class="text-center">XX</th>
+                                                <th  class="text-center">XX</th>
                                             </thead>
-                                            <?php foreach($datos as $td){ ?>
+                                            
                                             <tr>
-                                                <td><?php echo $td['nombre']; ?></td>
-                                                <td><?php echo $td['tipo_doc']; ?></td>
-                                                <td><?php echo $td['num_doc']; ?></td>
-                                                <td><?php echo $td['fecha_nacimiento']; ?></td>
-                                                <td><?php echo $td['rol']; ?></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
                                                 <td class="text-center">
-                                                    <a href="editarUser.php?id=<?php echo $td["idUsuario"]?>">
-                                                        <button class="btn btn-info">Editar</button>
+                                                    <a href="#" class="btn btn-info">Editar</button>
                                                     </a>
-                                                    <a href="bdUser.php?id=<?php echo $td["idUsuario"]?>&funcion=eliminar"> 
-                                                        <button class="btn btn-danger">Eliminar</button>
+                                                    <a href="#" class="btn btn-danger">Eliminar</button>
                                                     </a>
                                                 </td>
                                             </tr>
-                                            <?php } ?>
+                                         
                                         </table>    
                                     </div>    
                                 </div>
@@ -74,21 +69,16 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <?php
-                                    for($i = 1; $i <= $total_paginas; $i++){
-                                    echo "<ul class='pagination'>
-                                        <li><a href='?pagina=".$i."'>".$i."</a></li>
-                                    </ul>";}
-                                ?>    
+                               <p>ACA PAGINACION</p>   
                             </div>
                         </div>
                         <div class="row">
                                 <div class="col">
-                                    <a href="registrarUser.php" class="btn btn-primary">Nuevo usuario</a>
+                                    <a href="#" class="btn btn-primary">Nuevo Presupuesto</a>
                                 </div>
                         </div>
                         <div class="row">
-                            <a href="/logistica/exportarUser.php">
+                            <a href="#">
                                 <button class="btn btn-link">Exportar a PDF</button>
                             </a>
                         </div>
@@ -98,4 +88,4 @@
         </div>
     </div>
 </body>
-||</html>
+</html>

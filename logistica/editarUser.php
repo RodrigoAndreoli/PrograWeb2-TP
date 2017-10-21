@@ -43,14 +43,7 @@
                                     <form action="bdUser.php" method="post" class="form-horizontal">
                                         <table class="table table-striped  table-condensed table-hover">
                                             <?php foreach($user as $users){ ?>
-                                            <div class="form-group">
-                                                <div class="col-xs-12 col-lg-6 col-lg-offset-3">
-                                                    <label class="control-label col-xs-4 col-sm-3">IdUsuario:</label>
-                                                    <div class="col-xs-8 col-sm-9">
-                                                        <input type="text" class="form-control"  placeholder="<?php echo $users['idUsuario']; ?>" name="idUsuario" readonly="readonly">
-                                                    </div>
-                                                </div>
-                                            </div>
+
                                             <div class="form-group">
                                                 <div class="col-xs-12 col-lg-6 col-lg-offset-3">
                                                     <label class="control-label col-xs-4 col-sm-3">Nombre:</label>

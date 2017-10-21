@@ -5,23 +5,25 @@
 		$user = $_POST['num_doc'];
 		$pass = md5($_POST['password']);
 		$hoy = date("Y-m-d H:i:s");
-	
+	   
         //Prepared statement
 		$ingreso = $conexion->prepare("
-            SELECT idUsuario,nombre 
+            SELECT idUsuario,nombre,rol 
             FROM usuario 
             WHERE num_doc = ? and password = ? 
             ");
-		$ingreso->bind_param("ss",$user,$pass);
+        
+		$ingreso->bind_param("si",$user,$pass);
 		//Ejecucion de la sentencia preparada
 		$ingreso->execute();
 		//Formateo de resultados
 		$resultado = $ingreso->get_result();
 		$fila = $resultado->fetch_assoc();
-		
+	
 		if($resultado->num_rows>=1) {
 			session_start();
 			$_SESSION['usuario'] = $fila['nombre'];
+            $_SESSION['rol'] = $fila['rol'];
 			header('Location: ppal.php');
             exit();
 		} else {

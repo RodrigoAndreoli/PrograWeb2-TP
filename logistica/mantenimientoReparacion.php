@@ -7,11 +7,14 @@
         require_once($_SERVER['DOCUMENT_ROOT'].'/resources/config.php');
         $miSession = new Sesion();
         $miSession -> iniciarSesion();
+        if($_SESSION['rol']=='chofer'){
+            $miSession -> permisos();
+        }
         
         $obj = new controlDB();
         
         /*-------------Paginacion-------------------*/
-        $tamagno_paginas = 7; //Cuantos registros x pag
+        $tamagno_paginas = 6; //Cuantos registros x pag
         if(isset($_GET['pagina'])) {
             $pag = $_GET['pagina'];
         } else {
@@ -20,7 +23,7 @@
         $empezar_desde = ($pag-1) * $tamagno_paginas;
         $datos = $obj -> consultar("SELECT m.tipo_vehiculo, m.fecha_entrada, m.repuestos, m.costo, m.km_unidad, u.nombre, m.externo 
             FROM mantenimiento AS m 
-            JOIN usuario AS u ON u.idUsuario = m.idUsuario 
+            JOIN usuario AS u ON u.idUsuario = m.idMecanico 
             ORDER BY m.fecha_entrada");
         //print_r($datos);
         /*-------------Paginacion-------------------*/
@@ -80,10 +83,10 @@
                                                 <td><?php echo $td['externo'];?></td>
                                                 <td><?php echo $td['costo'];?></td>
                                                 <td class="text-center">
-                                                    <a href="editarMantenimiento.php?id=<?php echo $td["idMantenimiento"]?>">
+                                                    <a href="#">
                                                         <button class="btn btn-info">Editar</button>
                                                     </a>
-                                                    <a href="bdMantenimiento.php?id=<?php echo $td["idMantenimiento"]?>&funcion=eliminar"> 
+                                                    <a href="#"> 
                                                         <button class="btn btn-danger">Eliminar</button>
                                                     </a>
                                             </td>

@@ -7,17 +7,18 @@
         require_once($_SERVER['DOCUMENT_ROOT'].'/resources/config.php');
         $miSession = new Sesion();
         $miSession -> iniciarSesion();
+        $miSession -> permisos();
     
         $obj = new controlDB();
         //echo strftime("%A %d de %B del %Y");
         $order = isset($_GET['ordenar']);
         if($order == "fSal") {
-            $datos = $obj -> consultar("SELECT m.fecha_entrada, fecha_salida, v.patente 
+            $datos = $obj -> consultar("SELECT m.fecha_entrada, m.fecha_salida, v.patente 
                 FROM mantenimiento AS m 
                 JOIN vehiculo AS v ON v.idVehiculo = m.idVehiculo 
                 ORDER BY m.fecha_salida");
         } else {
-            $datos = $obj -> consultar("SELECT m.fecha_entrada, fecha_salida, v.patente 
+            $datos = $obj -> consultar("SELECT m.fecha_entrada, m.fecha_salida, v.patente 
                 FROM mantenimiento AS m 
                 JOIN vehiculo AS v ON v.idVehiculo = m.idVehiculo 
                 ORDER BY m.fecha_entrada");

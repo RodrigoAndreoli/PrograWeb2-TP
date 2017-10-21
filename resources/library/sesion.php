@@ -15,5 +15,30 @@
             header('Location: login.php');
             exit();
         }
-    }
+        
+        public function permisos(){
+            
+            $rol=$_SESSION['rol'];/*
+            if($rol!='supervisor' )
+            {
+                header('Location: ppal.php');
+            }*/
+            switch ($rol) {
+                case 'chofer':
+                    header('Location: viajes.php');
+                   break;
+                case 'admin':
+                    header('Location: viajes.php');
+                    header('Location: vehiculos.php');
+                    header('Location: clientes.php');
+                    header('Location: mantenimientoReparacion.php');
+                    break;
+                case 'mecanico':
+                    header('Location: viajes.php');
+                    header('Location: vehiculos.php');
+                    header('Location: mantenimientoReparacion.php');
+                    break;
+            }
+        }
+    }//fin
 ?>

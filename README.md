@@ -27,3 +27,13 @@ $git merge ejemplo
 //BORRO (delete) EL BRANCH 'ejemplo' <-- Este no es necesario
 
 $ git branch -d ejemplo
+
+## usuarios
+
+* chofer     nro 1 contraseña 1
+* supervisor nro 2 contraseña 1234
+* mecanico   nro 3 contraseña 3
+* admin      nro 4 contraseña 4
+
+
+
