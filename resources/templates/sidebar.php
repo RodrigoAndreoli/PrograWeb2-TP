@@ -26,8 +26,18 @@
         </ul>
         
         <li>
+<<<<<<< HEAD
             <a href='vehiculo.php' data-toggle='collapse' data-target='#vehiculos' class='collapsed active'>Vehiculos<span class='icon-truck'></span></a>
         </li>
+=======
+            <a href='#' data-toggle='collapse' data-target='#vehiculos' class='collapsed active'>Vehiculos<span class='icon-truck'></span></a>
+        </li>
+        <ul class='sub-menu collapse' id='vehiculos'>
+            <li>
+                <a href='vehiculos.php'><i>Reportes</i></a>
+            </li>
+        </ul>
+>>>>>>> 352512090583eb093eb5e840380b2e3948bd4a4f
         <?php } ?>
         <?php if($_SESSION['rol']=='admin' || $_SESSION['rol']=='mecanico' || $_SESSION['rol']=='supervisor' || $_SESSION['rol']=='chofer'){ ?>
         <li>
@@ -44,8 +54,18 @@
         <?php } ?>
         <?php if($_SESSION['rol']=='admin' || $_SESSION['rol']=='supervisor'){ ?>
         <li>
+<<<<<<< HEAD
             <a href='clientes.php' data-toggle='collapse' data-target='#clientes' class='collapsed active'>Clientes<span class='icon-user'></span></a>
         </li>
+=======
+            <a href='#' data-toggle='collapse' data-target='#clientes' class='collapsed active'>Clientes<span class='icon-user'></span></a>
+        </li>
+        <ul class='sub-menu collapse' id='clientes'>
+            <li>
+                <a href='clientes.php'><i>Reportes</i></a>
+            </li>
+        </ul>
+>>>>>>> 352512090583eb093eb5e840380b2e3948bd4a4f
         <?php } ?>
         <?php if($_SESSION['rol']=='supervisor'){ ?>
         <li>

@@ -10,9 +10,12 @@
         if($_SESSION['rol']!='admin'){
             $miSession -> permisos();
         }    
+<<<<<<< HEAD
         $obj = new controlDB();
         include $LIBRARY_PATH.'/clientes_pag.php';
 
+=======
+>>>>>>> 352512090583eb093eb5e840380b2e3948bd4a4f
     ?>
 </head>
 
@@ -45,6 +48,7 @@
                                     <div class="table-responsive">
                                         <table class="table table-striped table-bordered table-condensed table-hover">
                                             <thead>
+<<<<<<< HEAD
                                                 <th  class="text-center">Cuit</th>
                                                 <th  class="text-center">Razón social</th>
                                                 <th  class="text-center">Calle</th>
@@ -73,6 +77,30 @@
                                                 </td>
                                             </tr>
                                             <?php } ?>
+=======
+                                                <th  class="text-center">XX</th>
+                                                <th  class="text-center">XX</th>
+                                                <th  class="text-center">XX</th>
+                                                <th  class="text-center">XX</th>
+                                                <th  class="text-center">XX</th>
+                                                <th  class="text-center">XX</th>
+                                            </thead>
+                                            
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td class="text-center">
+                                                    <a href="#" class="btn btn-info">Editar</button>
+                                                    </a>
+                                                    <a href="#" class="btn btn-danger">Eliminar</button>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                         
+>>>>>>> 352512090583eb093eb5e840380b2e3948bd4a4f
                                         </table>    
                                     </div>    
                                 </div>
@@ -80,21 +108,33 @@
                         </div>
                         <div class="row">
                             <div class="col">
+<<<<<<< HEAD
                                 <?php
                                     for($i = 1; $i <= $total_paginas; $i++){
                                     echo "<ul class='pagination'>
                                         <li><a href='?pagina=".$i."'>".$i."</a></li>
                                     </ul>";}
                                 ?>    
+=======
+                               <p>ACA PAGINACION</p>   
+>>>>>>> 352512090583eb093eb5e840380b2e3948bd4a4f
                             </div>
                         </div>
                         <div class="row">
                                 <div class="col">
+<<<<<<< HEAD
                                     <a href="registrarCliente.php" class="btn btn-primary">Nuevo Cliente</a>
                                 </div>
                         </div>
                         <div class="row">
                             <a href="/logistica/exportarVehiculo.php">
+=======
+                                    <a href="#" class="btn btn-primary">Nuevo Cliente</a>
+                                </div>
+                        </div>
+                        <div class="row">
+                            <a href="#">
+>>>>>>> 352512090583eb093eb5e840380b2e3948bd4a4f
                                 <button class="btn btn-link">Exportar a PDF</button>
                             </a>
                         </div>
